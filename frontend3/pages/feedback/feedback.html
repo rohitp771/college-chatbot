@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Page</title>
+   
+</head>
+<body>
+    <link rel="stylesheet" href="feedback.css">
+    <script src="feedback.js"></script>
+    <div class="container">
+        <div class="header">
+            <h1>Askadmit Feedback</h1>
+            <p>We appreciate your feedback!</p>
+        </div>
+
+        <div class="feedback-form">
+            
+            <div class="emoji-container">
+                <div class="emoji" id="emoji-excellent" data-feedback="excellent">🤩</div>
+                <div class="emoji" id="emoji-good" data-feedback="good">😊</div>
+                <div class="emoji" id="emoji-neutral" data-feedback="neutral">😐</div>
+                <div class="emoji" id="emoji-bad" data-feedback="bad">😞</div>
+                <div class="emoji" id="emoji-terrible" data-feedback="terrible">😡</div>
+            </div>
+    
+            <div id="feedback-message" class="feedback-message">
+                <p>Please select an emoji to provide your feedback.</p>
+            </div>
+    
+            
+        </div>
+
+            <label for="comments">Any comments?</label>
+        
+            <textarea id="comments" placeholder="Your comments..."></textarea>
+            <p>Please type your  comment to give feedback.</p>
+            
+            <button id="submit-feedback" class="submit-button">Submit Feedback</button>
+
+            <div id="thank-you" class="thank-you-message">
+                <p>Thank you for your feedback!</p>
+            </div>
+        </div>
+    </div>
+
+   
+</body>
+</html>

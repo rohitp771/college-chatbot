@@ -1,0 +1,167 @@
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    background-image: url(../../assets/images/contact6.jpg);
+    background-size: center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    padding: auto;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #86c3ce;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    height: 100vh;
+    color: #fff;
+    background-color: #ffffff;
+    opacity: 2;
+  }
+
+  .container {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+    max-width: 900px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .header h1 {
+    color: #4CAF50;
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #555;
+  }
+
+  .contact-form-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-form .form-group {
+    margin-bottom: 20px;
+  }
+
+  .contact-form label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #c43cad;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border: 1px dashed blue;
+    outline: none;
+    background-color: transparent; /* Make background transparent */
+    color: #fff; /* Text color */
+    transition: border-color 0.3s ease;
+  }
+
+  ::placeholder {
+    color: transparent;  /* Make placeholder text transparent */
+    opacity: 0;           /* Optional: completely hide placeholder */
+    background: transparent;
+  }
+
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: hsl(221, 76%, 60%);
+  }
+
+  .submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background-color: #45a049;
+  }
+
+  /* Animation for fade-in */
+  .fadeIn {
+    opacity: 0;
+    animation: fadeInAnimation 1s forwards;
+  }
+
+  .fadeIn.delay-1 {
+    animation-delay: 0.5s;
+  }
+
+  .fadeIn.delay-2 {
+    animation-delay: 1s;
+  }
+
+  .chatbot-icon img {
+    width: 150px;
+    height: auto;
+    animation: bounceAnimation 2s infinite;
+    margin-top: 30px;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #c4e255;
+  }
+
+  /* Fade-In Animation */
+  @keyframes fadeInAnimation {
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Bounce Animation for Chatbot Icon */
+  @keyframes bounceAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+

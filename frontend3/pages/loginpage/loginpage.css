@@ -1,0 +1,109 @@
+/* Global Styles */
+body {
+    background-image: url(../../assets/images/blue2.jpeg);
+    background-size: cover ;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    padding: auto;
+    box-sizing: border-box;
+    font-family: sans-serif;
+      
+
+    margin: 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    background-color: #ffffff;
+    opacity: 1;
+
+}
+
+  
+
+.container {
+    width: 150%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Form Wrapper */
+.form-wrapper {
+    position: relative;
+}
+
+/* Forms */
+.form {
+    display: none;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.form.active {
+    display: flex;
+}
+
+.form h1 {
+    margin-bottom: 20px;
+}
+
+.form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #4facfe;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+    background-color: #00c4cc;
+}
+
+/* Links */
+.form a {
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

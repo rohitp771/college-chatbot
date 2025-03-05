@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image:url(../../assets/images/image5.png);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    padding: auto;
+    box-sizing: border-box;
+    font-family: sans-serif;
+      
+     margin: 0;
+   
+    background-color: #86c3ce;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ece8e8;
+    background-color: #ffffff;
+    opacity: 2;
+
+}
+
+.container {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+    max-width: 900px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color:rgb(233, 229, 32);
+    font-weight: bold;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: #4CAF50;
+    font-size: 2rem;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.description {
+    width: 60%;
+    line-height: 1.6;
+}
+
+.description p {
+    font-size: 1.1rem;
+    opacity: 0;
+    animation: fadeInAnimation 1s forwards;
+}
+
+
+.description p.delay-1 {
+    animation-delay: 1s;
+}
+
+.animation {
+    width: 35%;
+    text-align: center;
+}
+
+.chatbot-icon img {
+    width: 150px;
+    height: auto;
+    animation: bounceAnimation 2s infinite;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #664cda;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+ol, li{
+    margin: 20px 20px;
+}
+/* Fade-In Animation */
+@keyframes fadeInAnimation {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Bounce Animation for Chatbot Icon */
+@keyframes bounceAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
