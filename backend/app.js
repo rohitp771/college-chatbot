@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
 const dotenv = require('dotenv');
+const path = require('path');
 
 dotenv.config();
 const app = express();
@@ -11,6 +12,8 @@ connectDB();
 
 // Middleware
 app.use(express.json());
+const externalFolderPath = path.resolve(__dirname, '../frontend3');
+app.use(express.static(externalFolderPath));
 
 // Routes
 app.use('/api/auth', require('./routes/authRoutes'));
