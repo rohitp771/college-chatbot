@@ -6,12 +6,26 @@
     <title>AskAdmit Chatbot</title>
     
 </head>
-<img src="../../assets/images/ai.png" alt="...">
-<img src="../../assets/images/chatbot.png" alt="...">
+
+
 <body>
-    <h2>Askadmit: 
-      <br> Ask and Talk to AI <br>Anything about your college.</br>
-    </h2>
+    <header style="position: sticky; top: 0; width: 100%; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 10px 20px; display: flex; justify-content: space-around; align-items: center; z-index: 1000;">
+        <div style="font-size: 24px; font-weight: bold;">AskAdmit Chatbot</div>
+        <button style="background-color: #f44336; color: white; border: none; padding: 10px 20px; cursor: pointer; font-size: 16px; transition: background-color 0.3s;" onclick="logout()">Logout</button>
+    </header>
+    <div style="display: flex; align-items:center; width:100%; justify-content: space-between;">
+        <div style="font: 30px solid;">Askadmit </div>
+        <div style="font: 30px solid;"> Ask and Talk to AI </div>
+        <div style="font: 30px solid;">Anything about your college. </div>
+       
+    </div>
+    <div style="display: flex; align-items:center; width:100%; justify-content: space-between;">
+        <img src="../../assets/images/ai.png" alt="...">
+        <button id="chatbotButton" class="chatbot-btn">💬</button>
+        <img src="../../assets/images/chatbot.png" alt="...">
+    </div>
+  
+    
     <!-- Chatbot Container -->
     <div class="chatbot-container">
         <!-- Chat Header -->
@@ -34,7 +48,7 @@
     </div>
 
     <!-- Chatbot Button -->
-    <button id="chatbotButton" class="chatbot-btn">💬</button>
+    
     <link rel="stylesheet" href="indexpage.css">
 
     <script src="indexpage.js"></script>

@@ -6,6 +6,10 @@ const sendMessage = document.getElementById('sendMessage');
 const userInput = document.getElementById('userInput');
 const chatContent = document.getElementById('chatContent');
 
+function logout(){
+    window.location.pathname = "/";
+}
+
 // Toggle Chatbot Visibility
 chatbotButton.addEventListener('click', () => {
     chatbotContainer.style.display = 'flex';

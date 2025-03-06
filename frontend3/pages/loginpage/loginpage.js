@@ -67,6 +67,7 @@ const registerUser = async (fullName,email,password) => {
       if (response.ok) {
         alert("User logged in successfully");
         document.getElementById('loginForm').reset();
+        window.location.pathname = '/pages/main/index.html';
       } else {
        alert("Error in user login");
       }

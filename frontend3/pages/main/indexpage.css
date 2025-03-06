@@ -5,7 +5,7 @@ body {
     padding: 0;
     background: linear-gradient(135deg, #4facfe, #00f2fe);
     height: 100vh;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
 }
@@ -13,8 +13,8 @@ body {
 /* Chatbot Button */
 .chatbot-btn {
     position: fixed;
-    bottom: 50px;
-    right: 20px;
+    left: 40%;
+    top: 30%;
     background-color: #4facfe;
     color: #fff;
     border: none;
@@ -30,8 +30,8 @@ body {
 /* Chatbot Container */
 .chatbot-container {
     position: fixed;
-    bottom: 90px;
-    right: 100px;
+    left:35%;
+    top:20%;
     background-color: #fff;
     width: 500px;
     border-radius: 20px;
@@ -39,6 +39,7 @@ body {
     display: none;
     flex-direction: column;
     overflow: hidden;
+    height:70%;
 }
 
 /* Chat Header */
