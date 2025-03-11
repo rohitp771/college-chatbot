@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  localStorage.clear();
+
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
     const email = document.getElementById('login-email').value;
@@ -20,10 +22,10 @@ document.getElementById('registerForm').addEventListener('submit', function(even
 
     if (!fullName || !email || !password || !confirmPass) {
         alert("All fields are mandatory!");
-        event.preventDefault();  // Prevent form submission
+        event.preventDefault();
     }else if(password !== confirmPass){
         alert("password and confirm password should match!");
-        event.preventDefault();  // Prevent form submission
+        event.preventDefault();
     }else{
         registerUser(fullName,email,password)
     }
@@ -40,6 +42,8 @@ const registerUser = async (fullName,email,password) => {
             fullName,email,password
         }),
       });
+
+      
   
       if (response.ok) {
         alert("User Registered successfully. Please login using same credentials.");
@@ -48,6 +52,7 @@ const registerUser = async (fullName,email,password) => {
        alert("Error in User Registration");
       }
     } catch (error) {
+      debugger
         alert("Error in User Registration");
     }
   };
@@ -63,9 +68,11 @@ const registerUser = async (fullName,email,password) => {
             email,password
         }),
       });
-  
+      const data = await response.json();
       if (response.ok) {
         alert("User logged in successfully");
+        localStorage.setItem("userName",email);
+        localStorage.setItem("token",data.token)
         document.getElementById('loginForm').reset();
         window.location.pathname = '/pages/main/index.html';
       } else {

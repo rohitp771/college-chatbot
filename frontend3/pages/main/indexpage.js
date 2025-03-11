@@ -7,7 +7,28 @@ const userInput = document.getElementById('userInput');
 const chatContent = document.getElementById('chatContent');
 
 function logout(){
-    window.location.pathname = "/";
+    fetch('http://localhost:5000/api/chat/query', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: localStorage.getItem("userName"),
+            token: localStorage.getItem("token")
+         })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if(data.message){
+            localStorage.clear();
+            alert("Logged out successfully")
+            window.location.pathname = "/";
+        }
+           
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+   
 }
 
 // Toggle Chatbot Visibility
@@ -23,6 +44,7 @@ closeChatbot.addEventListener('click', () => {
 
 // Handle Messages
 sendMessage.addEventListener('click', () => {
+    debugger
     const userMessage = userInput.value.trim();
     if (userMessage) {
         addMessage('user', userMessage);
@@ -42,12 +64,20 @@ function addMessage(sender, message) {
 
 // Bot Response Logic
 function botResponse(userMessage) {
-    const responses = {
-        hello: "Hi! How can I assist you today?",
-        admission: "We provide expert guidance for college admissions.",
-        fees: "Our services are affordable. Contact us for details.",
-    };
-
-    const botMessage = responses[userMessage.toLowerCase()] || "I'm sorry, I didn't understand that.";
-    setTimeout(() => addMessage('bot', botMessage), 500);
+        fetch('http://localhost:5000/api/chat/query', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ message: userMessage })
+        })
+        .then(response => response.json())
+        .then(data => {
+            debugger
+            // Append bot response to the chatbox
+            addMessage('bot', data.message)
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 }

@@ -18,7 +18,8 @@ app.use(express.static(externalFolderPath));
 // Routes
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/enquiries', require('./routes/enquiryRoutes'));
-app.use('/api/feedbacks',require("./routes/feedbackRoutes"))
+app.use('/api/feedbacks',require("./routes/feedbackRoutes"));
+app.use('/api/chat',require("./routes/chatRoutes"));
 
 // Start the server
 
