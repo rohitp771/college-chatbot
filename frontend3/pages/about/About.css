@@ -43,6 +43,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     color:rgb(233, 229, 32);
     font-weight: bold;
+    margin-top: 10%;
 }
 
 .header {
@@ -127,3 +128,44 @@ ol, li{
         transform: translateY(0);
     }
 }
+
+
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);  /* Transparent background */
+    padding: 10px 20px;
+    width: 100%;
+    z-index: 1000;  /* Ensures it's on top of other content */
+    backdrop-filter: blur(5px); /* Optional: Adds a blur effect to the background behind the header */
+    transition: background-color 0.3s;
+  }
+  
+  /* Navbar styles */
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  .navbar ul li {
+    margin: 0 15px;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .navbar ul li a:hover {
+    color: #f0f0f0;
+  }
+  
+  /* Optional: Add shadow effect when scrolling */
+  .sticky-nav.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Darkens background slightly when scrolling */
+  }

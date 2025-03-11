@@ -57,7 +57,7 @@ sendMessage.addEventListener('click', () => {
 function addMessage(sender, message) {
     const messageElement = document.createElement('div');
     messageElement.classList.add('chat-message', sender);
-    messageElement.textContent = message;
+    messageElement.innerHTML = message;
     chatContent.appendChild(messageElement);
     chatContent.scrollTop = chatContent.scrollHeight;
 }
