@@ -19,6 +19,7 @@ function logout(){
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            'authorization': 'bearer '+localStorage.getItem("token")
         },
         body: JSON.stringify({ email: localStorage.getItem("userName"),
             token: localStorage.getItem("token")
@@ -78,10 +79,16 @@ function botResponse(userMessage) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'authorization': 'bearer '+localStorage.getItem("token")
             },
             body: JSON.stringify({ message: userMessage })
         })
-        .then(response => response.json())
+        .then(response => {
+            if(response.status === 401){
+                window.location.pathname = "/";
+            }else
+            return response.json()
+        })
         .then(data => {
             debugger
             // Append bot response to the chatbox
