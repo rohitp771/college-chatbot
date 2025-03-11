@@ -1,4 +1,12 @@
 // Chatbot Elements
+
+document.addEventListener('DOMContentLoaded', function() {
+    const token = localStorage.getItem('token');
+    if (!token) {
+        window.location.href = '/pages/homepage/homepage.html'; // Redirect to login page
+    }
+});
+
 const chatbotButton = document.getElementById('chatbotButton');
 const chatbotContainer = document.querySelector('.chatbot-container');
 const closeChatbot = document.getElementById('closeChatbot');
