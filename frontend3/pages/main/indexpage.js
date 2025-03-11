@@ -7,7 +7,7 @@ const userInput = document.getElementById('userInput');
 const chatContent = document.getElementById('chatContent');
 
 function logout(){
-    fetch('http://localhost:5000/api/chat/query', {
+    fetch('http://localhost:5000/api/auth/logout', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -18,10 +18,12 @@ function logout(){
     })
     .then(response => response.json())
     .then(data => {
-        if(data.message){
+        if(data.success){
             localStorage.clear();
             alert("Logged out successfully")
             window.location.pathname = "/";
+        }else{
+            alert("Unable to logout !")
         }
            
     })
