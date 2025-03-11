@@ -52,7 +52,7 @@ const registerUser = async (fullName,email,password) => {
        alert("Error in User Registration");
       }
     } catch (error) {
-      debugger
+      
         alert("Error in User Registration");
     }
   };

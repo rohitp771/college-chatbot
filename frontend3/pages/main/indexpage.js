@@ -55,7 +55,7 @@ closeChatbot.addEventListener('click', () => {
 
 // Handle Messages
 sendMessage.addEventListener('click', () => {
-    debugger
+    
     const userMessage = userInput.value.trim();
     if (userMessage) {
         addMessage('user', userMessage);
@@ -90,7 +90,7 @@ function botResponse(userMessage) {
             return response.json()
         })
         .then(data => {
-            debugger
+            
             // Append bot response to the chatbox
             addMessage('bot', data.message)
         })
