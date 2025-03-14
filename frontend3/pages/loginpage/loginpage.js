@@ -48,6 +48,10 @@ const registerUser = async (fullName,email,password) => {
       if (response.ok) {
         alert("User Registered successfully. Please login using same credentials.");
         document.getElementById('registerForm').reset();
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+        registerForm.classList.remove('active');
+        loginForm.classList.add('active');
       } else {
        alert("Error in User Registration");
       }
