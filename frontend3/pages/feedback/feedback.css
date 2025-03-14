@@ -28,7 +28,7 @@ body {
 
 .container {
     width: 100%;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 1);
    
   
     animation: fadeIn 1s ease-in-out;

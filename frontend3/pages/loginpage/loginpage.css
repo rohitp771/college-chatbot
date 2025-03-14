@@ -11,7 +11,7 @@ body {
 
     margin: 0;
     
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -24,6 +24,7 @@ body {
   
 
 .container {
+    margin-left: 30%;
     width: 150%;
     max-width: 500px;
     background: rgba(255, 255, 255, 0.1);
@@ -107,3 +108,44 @@ body {
         transform: translateX(0);
     }
 }
+
+
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);  /* Transparent background */
+    padding: 10px 20px;
+    width: 100%;
+    z-index: 1000;  /* Ensures it's on top of other content */
+    backdrop-filter: blur(5px); /* Optional: Adds a blur effect to the background behind the header */
+    transition: background-color 0.3s;
+  }
+  
+  /* Navbar styles */
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  .navbar ul li {
+    margin: 0 15px;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .navbar ul li a:hover {
+    color: #f0f0f0;
+  }
+  
+  /* Optional: Add shadow effect when scrolling */
+  .sticky-nav.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Darkens background slightly when scrolling */
+  }
