@@ -34,8 +34,8 @@ Run below two commands after one another
 (first command to install dependency. 
 second for starting node backend server)
 
-**npm install
-node app.js **
+npm install
+node app.js
 
 
 you can check app running on 
