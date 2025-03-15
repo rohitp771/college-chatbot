@@ -14,7 +14,7 @@ Install setup after download
 2. Install node
 
 https://nodejs.org/en/download
-Click on Windows Installer (.msi)
+**Click on Windows Installer (.msi)**
 
 Install setup after download
 
@@ -22,8 +22,8 @@ Install setup after download
 
 3. Create connection and collection in mongoDB compass which is installed through first step
 
-Add new connection as "collegeDB"
-Add new Collection as "collegeDB"
+**Add new connection as "collegeDB"
+Add new Collection as "collegeDB"**
 
 4. Open Project Folder in VSCode and open terminal in it.
 
@@ -34,8 +34,8 @@ Run below two commands after one another
 (first command to install dependency. 
 second for starting node backend server)
 
-npm install
-node app.js 
+**npm install
+node app.js **
 
 
 you can check app running on 
