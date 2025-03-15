@@ -1,4 +1,4 @@
-To run the project on local
+**To run the project on local**
 
 1. Install MongoDB from below Link
 
