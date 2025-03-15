@@ -30,7 +30,9 @@ Add new Collection as "collegeDB"
 (Note : before running below command make sure mongoDB is running - check Task manager - services tab - serach for MongoDB - Status should be running)
 
 Go inside backend folder in terminal.
-Run below command
+Run below two commands after one another (first command to install dependency. second for starting node backend server)
+
+npm install
 node app.js 
 
 
