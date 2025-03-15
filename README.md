@@ -35,6 +35,8 @@ Run below two commands after one another
 second for starting node backend server)
 
 npm install
+
+
 node app.js
 
 
